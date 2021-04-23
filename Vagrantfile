@@ -69,8 +69,10 @@ config.vm.network "private_network", ip: "192.168.33.10"
         sudo yum-config-manager \
       --add-repo \
       https://download.docker.com/linux/centos/docker-ce.repo
-       sudo yum install docker-ce.x86_64 docker-ce.x86_64 containerd.io -y
-       sudo systemctl start docker
+       yum install docker-ce.x86_64 docker-ce.x86_64 containerd.io -y
+       systemctl start docker
+       docker pull ubuntu
+       docker pull nginx
    SHELL
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
