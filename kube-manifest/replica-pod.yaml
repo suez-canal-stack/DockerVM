@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: hello-replicaset
+  labels:
+    appkey: myapp-replica
+    type: replicasettype
+spec:
+  template:
+    metadata:
+      name: hello-pod-app
+      labels:
+        appkey: myapp
+        type: webapptype
+    spec:
+      containers:
+      - name: nginx-name
+        image: nginx
+  replicas: 0
+  selector:
+    matchLabels:
+      type: webapptype

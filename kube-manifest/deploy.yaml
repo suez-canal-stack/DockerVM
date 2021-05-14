@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deploy
+  labels:
+    appkey: myapp-deploy
+    type: deploytype
+spec:
+  template:
+    metadata:
+      name: hello-pod-app
+      labels:
+        appkey: myapp
+        type: webapptype
+    spec:
+      containers:
+      - name: nginx-name
+        image: nginx:1.15
+  replicas: 3
+  selector:
+    matchLabels:
+      type: webapptype
