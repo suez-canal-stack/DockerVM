@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app
+data:
+  APP_ENV: dev
+  JDK_VER: val
