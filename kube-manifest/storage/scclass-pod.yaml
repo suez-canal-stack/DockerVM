@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-ex
+spec:
+  containers:
+  - image: ubuntu
+    name: ubuntu
+    command: ["tail", "-f","/dev/null"]
+    volumeMounts:
+    - mountPath: /opt
+      name: data-volume
+  volumes:
+  - name: data-volume
+    persistentVolumeClaim:
+      claimName: pv-gcr-claim
