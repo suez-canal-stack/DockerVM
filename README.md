@@ -1,31 +1,12 @@
-# Docker Ubuntu VM
-#### Install Bakerx tool
+# Install Oracle virtual box
 
-`https://github.com/ottomatica/bakerx`
+https://www.virtualbox.org/wiki/Downloads
 
-#### Pull the focal ubuntu image
+# Install Vagrant
 
- `bakerx pull focal cloud-images.ubuntu.com` 
+https://www.vagrantup.com/downloads
 
-`bakerx run dockervm focal --ip 192.168.33.30`
-
-#### Set up Repository
- ```
- sudo apt-get update
-
- sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-
-echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io```
+#### How to run Vagrant
+```
+vagrant up
+```
