@@ -51,7 +51,7 @@ config.vm.network "private_network", ip: "192.168.33.10"
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  config.vm.synced_folder ".", "/vagrant_data"
+  #config.vm.synced_folder ".", "/vagrant_data"
   # config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
